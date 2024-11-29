@@ -1,0 +1,55 @@
+{
+    "name": "Grinder",
+    "original_name": "profile 1",
+    "emulation_status": true,
+    "commands": [
+        {
+            "command_name": "set_idle",
+            "response": "idle",
+            "error": "i cant stop!!",
+            "timeout": 1000
+        },
+        {
+            "command_name": "switch_on",
+            "response": "on",
+            "error": "Power fault",
+            "timeout": 15000
+        },
+        {
+            "command_name": "move",
+            "response": "moved",
+            "error": "Move Crush",
+            "timeout": 30000
+        },
+        {
+            "command_name": "fastmove",
+            "response": "moved",
+            "error": "Move Crush",
+            "timeout": 30000
+        },
+        {
+            "command_name": "set_zero_point",
+            "response": "zero_point",
+            "error": "not_zero",
+            "timeout": 5000
+        },
+        {
+            "command_name": "sethome",
+            "response": "sethome",
+            "error": "Error Set Home",
+            "timeout": 25000
+        },
+        {
+            "command_name": "stop_feed",
+            "response": "stop_feed",
+            "error": "dont stop me now!",
+            "timeout": 1000
+        },
+        {
+            "command_name": "use_tool",
+            "response": "pushed",
+            "error": "Tool press",
+            "timeout": 5000
+        }
+    ]
+}

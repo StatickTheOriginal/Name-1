@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AboutWindow</class>
+ <widget class="QDialog" name="AboutWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>580</width>
+    <height>580</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 14pt &quot;Calibri&quot;;
+background-color: rgb(221, 221, 221);
+</string>
+  </property>
+  <widget class="QFrame" name="frame_fr_ok_btn">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>492</y>
+     <width>553</width>
+     <height>73</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="pushButton_ok">
+    <property name="geometry">
+     <rect>
+      <x>416</x>
+      <y>15</y>
+      <width>121</width>
+      <height>49</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+	background-color: rgb(160, 160, 160);
+    border-radius: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: rgb(200, 200, 200);
+}</string>
+    </property>
+    <property name="text">
+     <string>ОК</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_about_info">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>12</y>
+     <width>553</width>
+     <height>457</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

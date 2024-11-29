@@ -1,0 +1,19 @@
+{
+    "name": "Шаблонная 834",
+    "original_name": "profile 3",
+    "commands": [
+        {
+            "command_name": "rotate",
+            "response": "rotating",
+            "error": "dont rotating",
+            "timeout": 30000
+        },
+        {
+            "command_name": "stab",
+            "response": "stabed",
+            "error": "dont stab",
+            "timeout": 1000
+        }
+    ],
+    "emulation_status": false
+}

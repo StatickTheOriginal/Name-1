@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Edit_profiles</class>
+ <widget class="QMainWindow" name="Edit_profiles">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>EditProfiles</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 12pt &quot;intel&quot;;
+background-color :#F6F6F6;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	background-color:#E2E2E2;
+    border-radius: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #D9D9D9;
+}</string>
+   </property>
+   <widget class="QFrame" name="frame_profile">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>12</y>
+      <width>349</width>
+      <height>577</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#frame_profile{
+	background-color: #FFFFFF;
+border: solid #D9D9D9;
+border-width: 1px;
+border-radius: 10px;
+color: rgb(0, 0, 0);
+font: 12pt &quot;Calibri&quot;;
+}
+
+QLabel{
+
+	background-color: rgb(255, 255, 255);
+}
+
+QCheckBox#checkBox_work_emulation{
+	background-color: rgb(236, 236, 236);
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_profile">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>12</y>
+       <width>97</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Профиль</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>48</y>
+       <width>73</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 9pt &quot;Calibri&quot;;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>Название:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_profile_name">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>84</y>
+       <width>313</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #FFFFFF;
+border: solid #D9D9D9;
+border-width: 2px;
+border-radius: 10px;
+color: rgb(0, 0, 0);
+font: 12pt &quot;Calibri&quot;;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_comands_blueprint">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>132</y>
+       <width>133</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 9pt &quot;Calibri&quot;;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>Шаблон команды:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_params_type">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>168</y>
+       <width>313</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #FFFFFF;
+border: solid #D9D9D9;
+border-width: 2px;
+border-radius: 10px;
+color: rgb(0, 0, 0);
+font: 12pt &quot;Calibri&quot;;</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>&lt;Команда&gt;.&lt;Параметр&gt;</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>&lt;Команда&gt;</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_work_emulation">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>216</y>
+       <width>145</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 9pt &quot;Calibri&quot;;
+background-color: rgb(255, 255, 255);
+
+</string>
+     </property>
+     <property name="text">
+      <string>Эмуляция работы</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_export">
+     <property name="geometry">
+      <rect>
+       <x>216</x>
+       <y>528</y>
+       <width>121</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>Экспорт</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../res-rc.qrc">
+       <normaloff>:/icons/icons/upload.svg</normaloff>:/icons/icons/upload.svg</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_clone">
+     <property name="geometry">
+      <rect>
+       <x>24</x>
+       <y>528</y>
+       <width>181</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>Клонировать</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../res-rc.qrc">
+       <normaloff>:/icons/icons/copy.svg</normaloff>:/icons/icons/copy.svg</iconset>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_list_com">
+    <property name="geometry">
+     <rect>
+      <x>384</x>
+      <y>12</y>
+      <width>877</width>
+      <height>577</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#frame_list_com{
+	background-color: #FFFFFF;
+border: solid #D9D9D9;
+border-width: 1px;
+border-radius: 10px;
+color: rgb(0, 0, 0);
+font: 12pt &quot;Calibri&quot;;
+	
+}
+
+QLabel{
+
+	background-color: rgb(236, 236, 236);
+}
+
+QCheckBox#checkBox_work_emulation{
+	background-color: rgb(236, 236, 236);
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_com_list">
+     <property name="geometry">
+      <rect>
+       <x>24</x>
+       <y>12</y>
+       <width>109</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 9pt &quot;Calibri&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Список команд</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_commands">
+     <property name="geometry">
+      <rect>
+       <x>24</x>
+       <y>48</y>
+       <width>313</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #FFFFFF;
+border: solid #D9D9D9;
+border-width: 2px;
+border-radius: 10px;
+color: rgb(0, 0, 0);
+font: 12pt &quot;Calibri&quot;;</string>
+     </property>
+     <property name="inputMask">
+      <string>Поиск</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_add_command">
+     <property name="geometry">
+      <rect>
+       <x>632</x>
+       <y>24</y>
+       <width>217</width>
+       <height>49</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>Добавить команду</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../res-rc.qrc">
+       <normaloff>:/icons/icons/add.svg</normaloff>:/icons/icons/add.svg</iconset>
+     </property>
+    </widget>
+    <widget class="QListView" name="listView_commands">
+     <property name="geometry">
+      <rect>
+       <x>24</x>
+       <y>96</y>
+       <width>829</width>
+       <height>457</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(200, 200, 200);
+font: 14pt &quot;Calibri&quot;;
+background-color: #FFFFFF;
+border: solid #D9D9D9;
+border-width: 2px;
+border-radius: 10px;
+color: rgb(0, 0, 0);
+font: 12pt &quot;Calibri&quot;;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_ok_canc">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>607</y>
+      <width>1249</width>
+      <height>97</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#frame_ok_canc{
+	background-color: #FFFFFF;
+}
+
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton_cancel">
+     <property name="geometry">
+      <rect>
+       <x>1104</x>
+       <y>24</y>
+       <width>133</width>
+       <height>49</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>Отмена</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_ok">
+     <property name="geometry">
+      <rect>
+       <x>948</x>
+       <y>24</y>
+       <width>133</width>
+       <height>49</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>ОК</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../res-rc.qrc"/>
+ </resources>
+ <connections/>
+</ui>

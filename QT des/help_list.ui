@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>help_list_window</class>
+ <widget class="QMainWindow" name="help_list_window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 14pt &quot;Calibri&quot;;
+background-color: #F6F6F6;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>72</y>
+      <width>1261</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #FFFFFF;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_hotkeys">
+    <property name="geometry">
+     <rect>
+      <x>528</x>
+      <y>12</y>
+      <width>181</width>
+      <height>49</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Горячие клавиши&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_ok">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>636</y>
+      <width>1261</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#frame_ok{
+	border-color: #EBEBEB;
+	background-color: #FFFFFF;
+}
+
+QPushButton {
+	background-color: #D9D9D9;
+    border-radius: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: rgb(200, 200, 200);
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="ok_button">
+     <property name="geometry">
+      <rect>
+       <x>1104</x>
+       <y>12</y>
+       <width>150</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>ОК</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

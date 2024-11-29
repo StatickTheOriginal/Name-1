@@ -1,0 +1,25 @@
+{
+    "name": "Малярную876",
+    "original_name": "profile 2",
+    "commands": [
+        {
+            "command_name": "paint in red",
+            "response": "painted (red)",
+            "error": "fail",
+            "timeout": 5000
+        },
+        {
+            "command_name": "paint in blue",
+            "response": "painted (blue)",
+            "error": "fail",
+            "timeout": 5000
+        },
+        {
+            "command_name": "paint in black",
+            "response": "painted (black)",
+            "error": "fail",
+            "timeout": 5000
+        }
+    ],
+    "emulation_status": false
+}
