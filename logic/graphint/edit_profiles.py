@@ -13,8 +13,14 @@ class Ui_Edit_profiles(object):
     def setupUi(self, Edit_profiles):
         Edit_profiles.setObjectName("Edit_profiles")
         Edit_profiles.resize(1280, 720)
-        Edit_profiles.setStyleSheet("font: 12pt \"intel\";\n"
-"background-color :#F6F6F6;")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/icons/icons/Size=16, Type=Light.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        Edit_profiles.setWindowIcon(icon)
+        Edit_profiles.setStyleSheet("\n"
+"\n"
+"font: 12pt \"intel\";\n"
+"background-color :#F6F6F6;\n"
+"")
         self.centralwidget = QtWidgets.QWidget(parent=Edit_profiles)
         self.centralwidget.setStyleSheet("QPushButton {\n"
 "    background-color:#E2E2E2;\n"
@@ -34,7 +40,7 @@ class Ui_Edit_profiles(object):
 "border-width: 1px;\n"
 "border-radius: 10px;\n"
 "color: rgb(0, 0, 0);\n"
-"font: 12pt \"Calibri\";\n"
+"font: 12pt \"intel\";\n"
 "}\n"
 "\n"
 "QLabel{\n"
@@ -92,17 +98,28 @@ class Ui_Edit_profiles(object):
         self.pushButton_export = QtWidgets.QPushButton(parent=self.frame_profile)
         self.pushButton_export.setGeometry(QtCore.QRect(216, 528, 121, 37))
         self.pushButton_export.setStyleSheet("color: rgb(0, 0, 0);")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/icons/icons/upload.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButton_export.setIcon(icon)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/icons/icons/upload.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButton_export.setIcon(icon1)
+        self.pushButton_export.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_export.setObjectName("pushButton_export")
         self.pushButton_clone = QtWidgets.QPushButton(parent=self.frame_profile)
         self.pushButton_clone.setGeometry(QtCore.QRect(24, 528, 181, 37))
         self.pushButton_clone.setStyleSheet("color: rgb(0, 0, 0);")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/icons/icons/copy.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButton_clone.setIcon(icon1)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/icons/icons/copy.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButton_clone.setIcon(icon2)
+        self.pushButton_clone.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_clone.setObjectName("pushButton_clone")
+        self.checkBox_EOL_str_end = QtWidgets.QCheckBox(parent=self.frame_profile)
+        self.checkBox_EOL_str_end.setGeometry(QtCore.QRect(12, 252, 181, 37))
+        self.checkBox_EOL_str_end.setStyleSheet("font: 9pt \"Calibri\";\n"
+"background-color: rgb(255, 255, 255);\n"
+"\n"
+"")
+        self.checkBox_EOL_str_end.setCheckable(True)
+        self.checkBox_EOL_str_end.setChecked(True)
+        self.checkBox_EOL_str_end.setObjectName("checkBox_EOL_str_end")
         self.frame_list_com = QtWidgets.QFrame(parent=self.centralwidget)
         self.frame_list_com.setGeometry(QtCore.QRect(384, 12, 877, 577))
         self.frame_list_com.setStyleSheet("QFrame#frame_list_com{\n"
@@ -111,7 +128,7 @@ class Ui_Edit_profiles(object):
 "border-width: 1px;\n"
 "border-radius: 10px;\n"
 "color: rgb(0, 0, 0);\n"
-"font: 12pt \"Calibri\";\n"
+"font: 12pt \"intel\";\n"
 "    \n"
 "}\n"
 "\n"
@@ -145,9 +162,10 @@ class Ui_Edit_profiles(object):
         self.pushButton_add_command = QtWidgets.QPushButton(parent=self.frame_list_com)
         self.pushButton_add_command.setGeometry(QtCore.QRect(632, 24, 217, 49))
         self.pushButton_add_command.setStyleSheet("color: rgb(0, 0, 0);")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/icons/icons/add.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButton_add_command.setIcon(icon2)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(":/icons/icons/add.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButton_add_command.setIcon(icon3)
+        self.pushButton_add_command.setIconSize(QtCore.QSize(30, 30))
         self.pushButton_add_command.setObjectName("pushButton_add_command")
         self.listView_commands = QtWidgets.QListView(parent=self.frame_list_com)
         self.listView_commands.setGeometry(QtCore.QRect(24, 96, 829, 457))
@@ -164,6 +182,7 @@ class Ui_Edit_profiles(object):
         self.frame_ok_canc.setGeometry(QtCore.QRect(12, 607, 1249, 97))
         self.frame_ok_canc.setStyleSheet("QFrame#frame_ok_canc{\n"
 "    background-color: #FFFFFF;\n"
+"    border-radius: 10px\n"
 "}\n"
 "\n"
 "")
@@ -194,6 +213,7 @@ class Ui_Edit_profiles(object):
         self.checkBox_work_emulation.setText(_translate("Edit_profiles", "Эмуляция работы"))
         self.pushButton_export.setText(_translate("Edit_profiles", "Экспорт"))
         self.pushButton_clone.setText(_translate("Edit_profiles", "Клонировать"))
+        self.checkBox_EOL_str_end.setText(_translate("Edit_profiles", "Ожидание конца строки"))
         self.label_com_list.setText(_translate("Edit_profiles", "Список команд"))
         self.lineEdit_commands.setInputMask(_translate("Edit_profiles", "Поиск"))
         self.pushButton_add_command.setText(_translate("Edit_profiles", "Добавить команду"))

@@ -11,6 +11,7 @@ class SerialCommandHandler:
         self.ser = None
         self.com_port = self.load_com_port()
         self.update_active_command_list = update_active_command_list
+        self.read_delay = 2
 
     def load_com_port(self):
         settings_path = 'settings.json'
@@ -18,7 +19,7 @@ class SerialCommandHandler:
             with open(settings_path, 'r', encoding="utf-8") as f:
                 settings = json.load(f)
                 return settings.get("com_port", None)
-        logging.error("Файл настроек не найден или не содержит COM-порт.")
+        logging.error("Файл настроек не найден или не содержит COM-порт")
         return None
 
     def load_commands(self):
@@ -72,14 +73,17 @@ class SerialCommandHandler:
     def handle_command(self, request):
         cmd, *params = request.split(".", 1)
 
+        if len(params) > 0:
+            params = params[0].strip()
+        else:
+            params = ""
+
         if cmd not in self.commands:
             logging.warning(f"Команда '{cmd}' не существует в словаре")
+            self.update_active_command_list(f"Неизвестная команда: {cmd}", "")
             return None
 
-        if len(params) > 0:
-            logging.info(f"Команда: {cmd}, Параметр: {params[0]}")
-        else: 
-            logging.info(f"Команда: {cmd}")
+        logging.info(f"Команда: {cmd}, Параметр: {params}")
 
         response_info = self.commands[cmd]
         expected_response = response_info.get("response", "")
@@ -112,13 +116,14 @@ class SerialCommandHandler:
         try:
             while True:
                 if self.ser.in_waiting > 0:
-                    request = self.ser.readline().decode('utf-8').strip()
+                    time.sleep(self.read_delay)
+                    request = self.ser.read_all().decode('utf-8').strip()
                     logging.info(f"Получен запрос: {request}")
                     response = self.handle_command(request)
                     if response:
                         self.ser.write(response.encode('utf-8'))
                         logging.info(f"Отправлен ответ: {response}")
-                        self.update_active_command_list(f"Команда: {request}, Результат: {response}")
+                        self.update_active_command_list(request, response)
         except KeyboardInterrupt:
             logging.info("Завершение работы эмулятора")
         except Exception as e:

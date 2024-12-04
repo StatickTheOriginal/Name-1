@@ -1,0 +1,24 @@
+{
+    "name": "alphavet",
+    "emulation_status": true,
+    "commands": [
+        {
+            "command_name": "com a",
+            "response": "a",
+            "error": "wrong command",
+            "timeout": 500
+        },
+        {
+            "command_name": "com b",
+            "response": "b",
+            "error": "wrong command",
+            "timeout": 500
+        },
+        {
+            "command_name": "com c",
+            "response": "c",
+            "error": "wrong command",
+            "timeout": 500
+        }
+    ]
+}

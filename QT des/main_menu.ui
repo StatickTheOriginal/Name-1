@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="res-rc.qrc">
+    <normaloff>:/icons/icons/Size=16, Type=Light.svg</normaloff>:/icons/icons/Size=16, Type=Light.svg</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">font: 12pt &quot;intel&quot;;
 background-color:#F6F6F6;</string>
@@ -39,6 +43,9 @@ QPushButton:hover {
       <height>80</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>Очистить (Ctrl+c)</string>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
@@ -46,8 +53,14 @@ QPushButton:hover {
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="../res-rc.qrc">
+     <iconset resource="res-rc.qrc">
       <normaloff>:/icons/icons/clear_all.svg</normaloff>:/icons/icons/clear_all.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="export_button">
@@ -59,6 +72,9 @@ QPushButton:hover {
       <height>80</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>Экспорт (Ctrl+x)</string>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
@@ -66,8 +82,14 @@ QPushButton:hover {
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="../res-rc.qrc">
+     <iconset resource="res-rc.qrc">
       <normaloff>:/icons/icons/save.svg</normaloff>:/icons/icons/save.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="help_list_button">
@@ -79,6 +101,9 @@ QPushButton:hover {
       <height>80</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>Справка (Ctrl+h)</string>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
@@ -86,8 +111,14 @@ QPushButton:hover {
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="../res-rc.qrc">
+     <iconset resource="res-rc.qrc">
       <normaloff>:/icons/icons/help.svg</normaloff>:/icons/icons/help.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="settings_button">
@@ -99,6 +130,9 @@ QPushButton:hover {
       <height>80</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>Настройки (Ctrl+s)</string>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 0);
 </string>
@@ -107,8 +141,14 @@ QPushButton:hover {
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="../res-rc.qrc">
+     <iconset resource="res-rc.qrc">
       <normaloff>:/icons/icons/settings.svg</normaloff>:/icons/icons/settings.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
     </property>
    </widget>
    <widget class="QListView" name="listView_action">
@@ -163,8 +203,14 @@ border-radius: 10px;</string>
       <string>Остановить</string>
      </property>
      <property name="icon">
-      <iconset resource="../res-rc.qrc">
+      <iconset resource="res-rc.qrc">
        <normaloff>:/icons/icons/stop.svg</normaloff>:/icons/icons/stop.svg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="launch_button">
@@ -183,8 +229,14 @@ border-radius: 10px;</string>
       <string>Запустить</string>
      </property>
      <property name="icon">
-      <iconset resource="../res-rc.qrc">
+      <iconset resource="res-rc.qrc">
        <normaloff>:/icons/icons/play.svg</normaloff>:/icons/icons/play.svg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
      </property>
     </widget>
     <widget class="QComboBox" name="profiles_combobox">
@@ -208,7 +260,7 @@ border-radius: 10px;</string>
   </widget>
  </widget>
  <resources>
-  <include location="../res-rc.qrc"/>
+  <include location="res-rc.qrc"/>
  </resources>
  <connections/>
 </ui>

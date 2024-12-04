@@ -1,88 +1,222 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AboutWindow</class>
- <widget class="QDialog" name="AboutWindow">
+ <class>MainAboutWindow</class>
+ <widget class="QMainWindow" name="MainAboutWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>580</width>
-    <height>580</height>
+    <width>945</width>
+    <height>665</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">font: 14pt &quot;Calibri&quot;;
-background-color: rgb(221, 221, 221);
-</string>
+   <string notr="true">font: 12pt &quot;intel&quot;;
+background-color :#F6F6F6;</string>
   </property>
-  <widget class="QFrame" name="frame_fr_ok_btn">
-   <property name="geometry">
-    <rect>
-     <x>12</x>
-     <y>492</y>
-     <width>553</width>
-     <height>73</height>
-    </rect>
-   </property>
+  <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">
-background-color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
-   </property>
-   <widget class="QPushButton" name="pushButton_ok">
-    <property name="geometry">
-     <rect>
-      <x>416</x>
-      <y>15</y>
-      <width>121</width>
-      <height>49</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-QPushButton {
-	background-color: rgb(160, 160, 160);
+    <string notr="true">QPushButton {
+	background-color:#E2E2E2;
     border-radius: 10px;
     border: none;
 }
 
 QPushButton:hover {
-    background-color: rgb(200, 200, 200);
-}</string>
+    background-color: #D9D9D9;
+}
+
+QFrame{background-color: rgb(255, 255, 255);
+border-radius: 10px}
+</string>
+   </property>
+   <widget class="QFrame" name="frame_about">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>12</y>
+      <width>949</width>
+      <height>553</height>
+     </rect>
     </property>
-    <property name="text">
-     <string>ОК</string>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_logo">
+     <property name="geometry">
+      <rect>
+       <x>108</x>
+       <y>12</y>
+       <width>709</width>
+       <height>205</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="about-rc.qrc">:/pic/icons/Property 1=Default.png</pixmap>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>192</x>
+       <y>204</y>
+       <width>553</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>RTDControl - это система управления для гибочного станка</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>108</x>
+       <y>252</y>
+       <width>253</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Версия:                        3.0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>108</x>
+       <y>288</y>
+       <width>409</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Дата сборки:                20.09.2024 16:44:21</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>108</x>
+       <y>324</y>
+       <width>289</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Версия Java:                11.0.24</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>108</x>
+       <y>360</y>
+       <width>289</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Версия JavaFX:             17.0.14</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>108</x>
+       <y>396</y>
+       <width>445</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Email:                           info@r-data.ru</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>108</x>
+       <y>432</y>
+       <width>313</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Сайт:                            rt-data.ru</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>324</x>
+       <y>504</y>
+       <width>313</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Copyright © 2024 ООО “РТ-Дата”</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_ok">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>588</y>
+      <width>949</width>
+      <height>73</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton_ok">
+     <property name="geometry">
+      <rect>
+       <x>828</x>
+       <y>12</y>
+       <width>109</width>
+       <height>49</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0)</string>
+     </property>
+     <property name="text">
+      <string>ОК</string>
+     </property>
+    </widget>
    </widget>
   </widget>
-  <widget class="QFrame" name="frame_about_info">
-   <property name="geometry">
-    <rect>
-     <x>12</x>
-     <y>12</y>
-     <width>553</width>
-     <height>457</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
-   </property>
-  </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="about-rc.qrc"/>
+ </resources>
  <connections/>
 </ui>

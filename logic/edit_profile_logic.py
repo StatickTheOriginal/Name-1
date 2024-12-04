@@ -93,7 +93,7 @@ class EditProfileWindow(QMainWindow):
         self.profile_data["name"] = self.ui.lineEdit_profile_name.text()
         self.profile_data["emulation_status"] = self.ui.checkBox_work_emulation.isChecked()
 
-        profile_path = os.path.join('profiles', f"{self.profile_data['original_name']}.json")
+        profile_path = os.path.join('profiles', f"{self.profile_data['name']}.json")
         with open(profile_path, 'w', encoding='utf-8') as f:
             json.dump(self.profile_data, f, ensure_ascii=False, indent=4)
 

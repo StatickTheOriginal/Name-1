@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="pic">
+    <file>../icons/Property 1=Default.png</file>
+    <file>../icons/Property 1=light.png</file>
+  </qresource>
+</RCC>

@@ -63,6 +63,7 @@ class Ui_Settings(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/icons/icons/add.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.add_profile_button.setIcon(icon)
+        self.add_profile_button.setIconSize(QtCore.QSize(30, 30))
         self.add_profile_button.setObjectName("add_profile_button")
         self.import_profiles_button = QtWidgets.QPushButton(parent=self.frame_profiles_control)
         self.import_profiles_button.setGeometry(QtCore.QRect(1104, 24, 125, 50))
@@ -70,6 +71,7 @@ class Ui_Settings(object):
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap(":/icons/icons/download.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.import_profiles_button.setIcon(icon1)
+        self.import_profiles_button.setIconSize(QtCore.QSize(30, 30))
         self.import_profiles_button.setObjectName("import_profiles_button")
         self.listView_profiles = QtWidgets.QListView(parent=self.frame_profiles_control)
         self.listView_profiles.setGeometry(QtCore.QRect(12, 84, 1225, 445))
@@ -151,6 +153,7 @@ class Ui_Settings(object):
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap(":/icons/icons/reset.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.update_COM_ports.setIcon(icon2)
+        self.update_COM_ports.setIconSize(QtCore.QSize(30, 30))
         self.update_COM_ports.setObjectName("update_COM_ports")
         self.tabWidget.addTab(self.settings_ports, "")
         self.frame_ok_canc = QtWidgets.QFrame(parent=self.centralwidget)
@@ -182,7 +185,7 @@ class Ui_Settings(object):
         Settings.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(Settings)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Settings)
 
     def retranslateUi(self, Settings):

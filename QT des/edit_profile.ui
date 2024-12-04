@@ -13,9 +13,16 @@
   <property name="windowTitle">
    <string>EditProfiles</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="res-rc.qrc">
+    <normaloff>:/icons/icons/Size=16, Type=Light.svg</normaloff>:/icons/icons/Size=16, Type=Light.svg</iconset>
+  </property>
   <property name="styleSheet">
-   <string notr="true">font: 12pt &quot;intel&quot;;
-background-color :#F6F6F6;</string>
+   <string notr="true">
+
+font: 12pt &quot;intel&quot;;
+background-color :#F6F6F6;
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -45,7 +52,7 @@ border: solid #D9D9D9;
 border-width: 1px;
 border-radius: 10px;
 color: rgb(0, 0, 0);
-font: 12pt &quot;Calibri&quot;;
+font: 12pt &quot;intel&quot;;
 }
 
 QLabel{
@@ -192,8 +199,14 @@ background-color: rgb(255, 255, 255);
       <string>Экспорт</string>
      </property>
      <property name="icon">
-      <iconset resource="../res-rc.qrc">
+      <iconset resource="res-rc.qrc">
        <normaloff>:/icons/icons/upload.svg</normaloff>:/icons/icons/upload.svg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_clone">
@@ -212,8 +225,39 @@ background-color: rgb(255, 255, 255);
       <string>Клонировать</string>
      </property>
      <property name="icon">
-      <iconset resource="../res-rc.qrc">
+      <iconset resource="res-rc.qrc">
        <normaloff>:/icons/icons/copy.svg</normaloff>:/icons/icons/copy.svg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_EOL_str_end">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>252</y>
+       <width>181</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 9pt &quot;Calibri&quot;;
+background-color: rgb(255, 255, 255);
+
+</string>
+     </property>
+     <property name="text">
+      <string>Ожидание конца строки</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
      </property>
     </widget>
    </widget>
@@ -233,7 +277,7 @@ border: solid #D9D9D9;
 border-width: 1px;
 border-radius: 10px;
 color: rgb(0, 0, 0);
-font: 12pt &quot;Calibri&quot;;
+font: 12pt &quot;intel&quot;;
 	
 }
 
@@ -308,8 +352,14 @@ font: 12pt &quot;Calibri&quot;;</string>
       <string>Добавить команду</string>
      </property>
      <property name="icon">
-      <iconset resource="../res-rc.qrc">
+      <iconset resource="res-rc.qrc">
        <normaloff>:/icons/icons/add.svg</normaloff>:/icons/icons/add.svg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
      </property>
     </widget>
     <widget class="QListView" name="listView_commands">
@@ -345,6 +395,7 @@ font: 12pt &quot;Calibri&quot;;</string>
     <property name="styleSheet">
      <string notr="true">QFrame#frame_ok_canc{
 	background-color: #FFFFFF;
+	border-radius: 10px
 }
 
 </string>
@@ -391,7 +442,7 @@ font: 12pt &quot;Calibri&quot;;</string>
   </widget>
  </widget>
  <resources>
-  <include location="../res-rc.qrc"/>
+  <include location="res-rc.qrc"/>
  </resources>
  <connections/>
 </ui>

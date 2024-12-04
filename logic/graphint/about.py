@@ -9,54 +9,98 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_AboutWindow(object):
-    def setupUi(self, AboutWindow):
-        AboutWindow.setObjectName("AboutWindow")
-        AboutWindow.resize(580, 580)
-        AboutWindow.setStyleSheet("font: 14pt \"Calibri\";\n"
-"background-color: rgb(221, 221, 221);\n"
-"")
-        self.frame_fr_ok_btn = QtWidgets.QFrame(parent=AboutWindow)
-        self.frame_fr_ok_btn.setGeometry(QtCore.QRect(12, 492, 553, 73))
-        self.frame_fr_ok_btn.setStyleSheet("\n"
-"background-color: rgb(255, 255, 255);")
-        self.frame_fr_ok_btn.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.frame_fr_ok_btn.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
-        self.frame_fr_ok_btn.setObjectName("frame_fr_ok_btn")
-        self.pushButton_ok = QtWidgets.QPushButton(parent=self.frame_fr_ok_btn)
-        self.pushButton_ok.setGeometry(QtCore.QRect(416, 15, 121, 49))
-        self.pushButton_ok.setStyleSheet("\n"
-"QPushButton {\n"
-"    background-color: rgb(160, 160, 160);\n"
+class Ui_MainAboutWindow(object):
+    def setupUi(self, MainAboutWindow):
+        MainAboutWindow.setObjectName("MainAboutWindow")
+        MainAboutWindow.resize(945, 665)
+        MainAboutWindow.setStyleSheet("font: 12pt \"intel\";\n"
+"background-color :#F6F6F6;")
+        self.centralwidget = QtWidgets.QWidget(parent=MainAboutWindow)
+        self.centralwidget.setStyleSheet("QPushButton {\n"
+"    background-color:#E2E2E2;\n"
 "    border-radius: 10px;\n"
 "    border: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(200, 200, 200);\n"
-"}")
+"    background-color: #D9D9D9;\n"
+"}\n"
+"\n"
+"QFrame{background-color: rgb(255, 255, 255);\n"
+"border-radius: 10px}\n"
+"")
+        self.centralwidget.setObjectName("centralwidget")
+        self.frame_about = QtWidgets.QFrame(parent=self.centralwidget)
+        self.frame_about.setGeometry(QtCore.QRect(-1, 12, 949, 553))
+        self.frame_about.setStyleSheet("")
+        self.frame_about.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_about.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_about.setObjectName("frame_about")
+        self.label_logo = QtWidgets.QLabel(parent=self.frame_about)
+        self.label_logo.setGeometry(QtCore.QRect(108, 12, 709, 205))
+        self.label_logo.setStyleSheet("")
+        self.label_logo.setText("")
+        self.label_logo.setPixmap(QtGui.QPixmap("pic/icons/Property 1=Default.png"))
+        self.label_logo.setObjectName("label_logo")
+        self.label_2 = QtWidgets.QLabel(parent=self.frame_about)
+        self.label_2.setGeometry(QtCore.QRect(192, 204, 553, 25))
+        self.label_2.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(parent=self.frame_about)
+        self.label_3.setGeometry(QtCore.QRect(108, 252, 253, 37))
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(parent=self.frame_about)
+        self.label_4.setGeometry(QtCore.QRect(108, 288, 409, 37))
+        self.label_4.setObjectName("label_4")
+        self.label_5 = QtWidgets.QLabel(parent=self.frame_about)
+        self.label_5.setGeometry(QtCore.QRect(108, 324, 289, 37))
+        self.label_5.setObjectName("label_5")
+        self.label_6 = QtWidgets.QLabel(parent=self.frame_about)
+        self.label_6.setGeometry(QtCore.QRect(108, 360, 289, 37))
+        self.label_6.setObjectName("label_6")
+        self.label_7 = QtWidgets.QLabel(parent=self.frame_about)
+        self.label_7.setGeometry(QtCore.QRect(108, 396, 445, 37))
+        self.label_7.setObjectName("label_7")
+        self.label_8 = QtWidgets.QLabel(parent=self.frame_about)
+        self.label_8.setGeometry(QtCore.QRect(108, 432, 313, 37))
+        self.label_8.setObjectName("label_8")
+        self.label_9 = QtWidgets.QLabel(parent=self.frame_about)
+        self.label_9.setGeometry(QtCore.QRect(324, 504, 313, 37))
+        self.label_9.setObjectName("label_9")
+        self.frame_ok = QtWidgets.QFrame(parent=self.centralwidget)
+        self.frame_ok.setGeometry(QtCore.QRect(0, 588, 949, 73))
+        self.frame_ok.setStyleSheet("")
+        self.frame_ok.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_ok.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_ok.setObjectName("frame_ok")
+        self.pushButton_ok = QtWidgets.QPushButton(parent=self.frame_ok)
+        self.pushButton_ok.setGeometry(QtCore.QRect(828, 12, 109, 49))
+        self.pushButton_ok.setStyleSheet("color: rgb(0, 0, 0)")
         self.pushButton_ok.setObjectName("pushButton_ok")
-        self.frame_about_info = QtWidgets.QFrame(parent=AboutWindow)
-        self.frame_about_info.setGeometry(QtCore.QRect(12, 12, 553, 457))
-        self.frame_about_info.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.frame_about_info.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.frame_about_info.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
-        self.frame_about_info.setObjectName("frame_about_info")
+        MainAboutWindow.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(AboutWindow)
-        QtCore.QMetaObject.connectSlotsByName(AboutWindow)
+        self.retranslateUi(MainAboutWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainAboutWindow)
 
-    def retranslateUi(self, AboutWindow):
+    def retranslateUi(self, MainAboutWindow):
         _translate = QtCore.QCoreApplication.translate
-        AboutWindow.setWindowTitle(_translate("AboutWindow", "Dialog"))
-        self.pushButton_ok.setText(_translate("AboutWindow", "ОК"))
+        MainAboutWindow.setWindowTitle(_translate("MainAboutWindow", "MainWindow"))
+        self.label_2.setText(_translate("MainAboutWindow", "RTDControl - это система управления для гибочного станка"))
+        self.label_3.setText(_translate("MainAboutWindow", "Версия:                        3.0"))
+        self.label_4.setText(_translate("MainAboutWindow", "Дата сборки:                20.09.2024 16:44:21"))
+        self.label_5.setText(_translate("MainAboutWindow", "Версия Java:                11.0.24"))
+        self.label_6.setText(_translate("MainAboutWindow", "Версия JavaFX:             17.0.14"))
+        self.label_7.setText(_translate("MainAboutWindow", "Email:                           info@r-data.ru"))
+        self.label_8.setText(_translate("MainAboutWindow", "Сайт:                            rt-data.ru"))
+        self.label_9.setText(_translate("MainAboutWindow", "Copyright © 2024 ООО “РТ-Дата”"))
+        self.pushButton_ok.setText(_translate("MainAboutWindow", "ОК"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    AboutWindow = QtWidgets.QDialog()
-    ui = Ui_AboutWindow()
-    ui.setupUi(AboutWindow)
-    AboutWindow.show()
+    MainAboutWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainAboutWindow()
+    ui.setupUi(MainAboutWindow)
+    MainAboutWindow.show()
     sys.exit(app.exec())
